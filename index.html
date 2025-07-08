@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia and Shivani</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            background-color: #900C3F;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header, footer {
+            background-color: #900C3F;
+            color: #929292;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .header-description {
+            margin-top: 10px;
+            color: #929292;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+.video-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.poster, .video-item img {
+    width: 70%; /* Adjust percentage as needed */
+    height: auto; /* Keeps aspect ratio */
+    cursor: pointer;
+    max-width: 300px; /* Limits maximum size */
+    border-radius: 5px;
+}
+
+       
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+        }
+
+        .video-caption {
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #900C3F;
+            color: #929292;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .video-description {
+            display: none;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #4c4c4c;
+            background-color: #900C3F;
+            color: #900C3F;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            color: #929292;
+        }
+
+      
+
+        /* Styling for the calendar popup */
+        .calendar-popup {
+            display: none;
+            background-color: #4c4c4c;
+            color: #929292;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px; /* Increase padding for more internal space */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 600px; /* Increase max-width */
+            width: 90%; /* Set a percentage to make it responsive */
+            min-height: 400px; /* Optional - add a minimum height */
+        }
+
+        .calendar-popup ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: auto; /* Enables scrolling when the list exceeds the height */
+        }
+
+        .calendar-popup li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        .calendar-popup li:hover {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            background-color: #929292; /* Button color */
+            color: #900C3F; /* Text color */
+            padding: 15px 25px; /* Increase padding to make it bigger */
+            font-size: 20px; /* Increase font size if necessary */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Styling for the buttons */
+        .calendar-popup button {
+            background-color: #929292;
+            color: #900C3F;
+            padding: 15px 20px; /* Ensuring button size is big enough */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .calendar-popup button:hover {
+            background-color: #777;
+        }
+
+        .calendar-popup .close-button {
+            background-color: #929292;
+        }
+
+        .calendar-popup {
+            overflow-y: auto; /* Add vertical scrolling */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+            <h1>No Glass Ceiling</h1>
+    <p>A shared vision by Sophia Čáková and Shivani Mathur</p>
+  </header>
+
+  <div class="container">
+    
+    <section>
+      <h2>The Beginning</h2>
+      <p>
+        Sophia Čáková and Shivani Mathur met in 2020 in what can only be described as a cathedral of art—the soaring 23-meter-high foyer at Central Saint Martins, King’s Cross, London. 
+        A space of remarkable scale and light, crowned by a ceiling of glass. And yet, to those who enter with creative purpose, there is no ceiling at all. 
+        The vision is unlimited.
+      </p>
+    </section>
+
+    <section>
+      <h2>Sharing the Vision</h2>
+      <p>
+        Today, we want to bring that vision to you. The freedom we enjoyed, the boundless energy we experienced, 
+        the delicate techniques we learned—and unlearned—we want to share.
+      </p>
+      <p>
+        This is not a traditional class. It is a conversation, a transmission, a shared moment of insight. 
+        We’re calling it <span class="highlight">“No Glass Ceiling”</span>—because that’s what it felt like, and that’s what it still is.
+      </p>
+    </section>
+
+    <section>
+      <h2>About Sophia Čáková</h2>
+      <p>
+        Sophia lives between Bratislava and Croatia and frequently travels across Europe, especially to Vienna and London. 
+        A dedicated oil painter, she creates emotionally rich and technically refined work. 
+        She shares her life with her husband, her dog, and a rabbit. 
+        Sophia also tutors children and regularly holds art classes that foster skill and expression.
+      </p>
+    </section>
+
+    <section>
+      <h2>About Shivani Mathur</h2>
+      <p>
+        Shivani is a trader by day and a painter by night. With over 30 years in finance, 
+        she was one of the City of London’s most senior bankers. Since 2008, she has quietly pursued art, 
+        and in 2020, she began studying Art and Science at Central Saint Martins—where she met Sophia. 
+        With a background in mathematics, Shivani brings both structure and emotion to her work.
+      </p>
+    </section>
+
+    <section>
+      <h2>Join Us</h2>
+      <p>
+        Together, we’re opening a space for creativity—a gathering, a workshop, a studio without walls.
+        A place to share vision, experience, and freedom. A place where there is, truly, <span class="highlight">no glass ceiling</span>.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 No Glass Ceiling. All rights reserved.
+  </footer>
+                 <div class="video-item">
+                <img src="Wedding.gif" alt="Hiranya Garbha" class="poster" onclick="toggleDescription(0)">
+               </div>
+   
+        </p>
+    </header>
+
+    <div class="video-container">
+
+        <!-- Image 1 -->
+      
+        
+        <div class="video-item">
+          
+             <p>
+            </p>       
+            <img src="IMG_4270.jpeg" alt="Hiranya Garbha" class="poster" onclick="toggleDescription(0)">
+            <div class="video-caption">
+            </div>
+               <p> 
+           This year, we celebrate the 60th anniversary of the day that ended those legendary dates and began a journey of lifetime love.
+                <br>  </p>
+             
+               
+            <p>
+         You are invited — to relive, to rejoice, and to share in the love that has carried them through six decades.
+                <br>And yes, we are asking for a gift. 
+               <br> The gift of your time.
+                <br>
+                <br>
+                Please arrange a date with them, just as they did with each other from 1962 to 1965.
+                <br>
+               We would love for you to select a date below and bring a letter or share a cherished memory—moments on the tracks of time as six decades have flown by.
+            </p>
+          
+            <button onclick="openCalendar()">View availabilty <br>to select <br> Your Date </button>
+        </div>
+    </div>
+
+    <!-- Calendar Pop-up -->
+    <div id="calendar-popup" class="calendar-popup">
+        <h3>Select a Date</h3>
+        <ul class="date-list">
+            Sun, 18 May 2025 - Gurgaon. Booked
+            Sun, 25 May 2025 - Gurgaon. Booked
+            <li onclick="submitDate('Sun, 8 Jun 2025 - Gurgaon')">Sun, 8 Jun 2025 - Gurgaon</li>
+            Sun, 15 Jun 2025 - Gurgaon. Booked
+            <li onclick="submitDate('Sun, 29 Jun 2025 - Gurgaon')">Sun, 29 Jun 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 6 Jul 2025 - Gurgaon')">Sun, 6 Jul 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 20 Jul 2025 - Gurgaon')">Sun, 20 Jul 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 27 Jul 2025 - Gurgaon')">Sun, 27 Jul 2025 - Gurgaon</li>
+            Sun, 10 Aug 2025 - Gurgaon. Booked
+            <li onclick="submitDate('Sun, 17 Aug 2025 - Gurgaon')">Sun, 17 Aug 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 31 Aug 2025 - Gurgaon')">Sun, 31 Aug 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 7 Sep 2025 - Gurgaon')">Sun, 7 Sep 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 14 Sep 2025 - Gurgaon')">Sun, 14 Sep 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 28 Sep 2025 - Gurgaon')">Sun, 28 Sep 2025 - Gurgaon</li>
+            <li onclick="submitDate('Sun, 23 Nov 2025 - London')">Sun, 23 Nov 2025 - London</li>
+            <li onclick="submitDate('Sun, 7 Dec 2025 - London')">Sun, 7 Dec 2025 - London</li>
+            <li onclick="submitDate('Sun, 21 Dec 2025 - London')">Sun, 21 Dec 2025 - London</li>
+            <li onclick="submitDate('Sun, 4 Jan 2026 - London')">Sun, 4 Jan 2026 - London</li>
+            <li onclick="submitDate('Sun, 18 Jan 2026 - London')">Sun, 18 Jan 2026 - London</li>
+            <li onclick="submitDate('Sun, 1 Feb 2026 - London')">Sun, 1 Feb 2026 - London</li>
+            <li onclick="submitDate('Sun, 15 Feb 2026 - London')">Sun, 15 Feb 2026 - London</li>
+            <li onclick="submitDate('Sun, 1 Mar 2026 - London')">Sun, 1 Mar 2026 - London</li>
+            <li onclick="submitDate('Sun, 15 Mar 2026 - London')">Sun, 15 Mar 2026 - London</li>
+            <li onclick="submitDate('Sun, 29 Mar 2026 - London')">Sun, 29 Mar 2026 - London</li>
+            <li onclick="submitDate('Sun, 12 Apr 2026 - London')">Sun, 12 Apr 2026 - London</li>
+            <li onclick="submitDate('Sun, 26 Apr 2026 - London')">Sun, 26 Apr 2026 - London</li>
+        </ul>
+        <button id="calendar-button" class="select-button" onclick="closeCalendar()">Close</button>
+   </div> 
+<div class="video">
+    <video
+        id="Video"
+        poster="IMG_5202.jpeg"
+        onclick="this.play(); this.setAttribute('controls', '');"
+        playsinline
+        style="cursor: pointer;"
+    >
+        <source src="jaimal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-caption">
+        9th May 2025. A special moment for Kalpana and Anand's 60th:<br>
+        The bride and groom exchange Jaimal. <br>Click image to see more.
+        <br>
+      
+    </p>
+</div>
+
+<div class="video">
+    <video
+        id="Video"
+        poster="Sundar.jpeg"
+        onclick="this.play(); this.setAttribute('controls', '');"
+        playsinline
+        style="cursor: pointer;"
+    >
+        <source src="Sundar.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-caption">
+        13th May 2025. Sundar Kand
+        <br>
+       17th May. A special moment for Shantanu's 30th and Kalpana and Anand's 60 th:<br> Sharing Jalebi, Samosa and Kulfi with 175 happy children at the Gurukul.
+     <br>  Click image to see more.
+         </p>
+
+   </div>
+
+
+    <div class="video">
+    <video
+        id="Video"
+        poster="Lals.jpeg "
+        onclick="this.play(); this.setAttribute('controls', '');"
+        playsinline
+        style="cursor: pointer;"
+    >
+        <source src="Lals.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-caption">
+        18th May 2025. Mr and Mrs Lal and Kavita  share Chai, Mehndi, music and a His and Her  duvet for 
+        the honeymoon couple. 
+     
+        <br>
+        
+  
+         </p>
+
+        
+   </div> 
+</div>
+
+
+    <div class="video">
+    <video
+        id="Video"
+        poster="PHOTO-2025-06-02-12-13-48 2.jpeg "
+        onclick="this.play(); this.setAttribute('controls', '');"
+        playsinline
+        style="cursor: pointer;"
+    >
+        <source src="Sund.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-caption">
+        26th May 2025. Arun and Cheena Rao celebrating with a gigiantic assembly of pictures dating 
+        back to 1984
+        <br>
+        
+  
+         </p>
+
+        
+   </div>
+
+    
+
+      
+      
+
+
+    
+
+    
+
+    <script>
+        // Open the calendar popup
+        function openCalendar() {
+            document.getElementById('calendar-popup').style.display = 'block';
+        }
+
+        // Close the calendar popup
+        function closeCalendar() {
+            document.getElementById('calendar-popup').style.display = 'none';
+        }
+
+        // Submit the selected date, send email with selected date
+        function submitDate(date) {
+            var email = "mailto:kalpanaanandmathur@gmail.com?subject=Selected%20Date&body=I%20would%20like%20to%20confirm%20the%20date:%20" + encodeURIComponent(date);
+            window.location.href = email;
+            closeCalendar();  // Close the popup after sending email
+        }
+    </script>
+
+</body>
+</html>
