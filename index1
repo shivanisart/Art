@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Ceiling Art Workshop</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      background-color: #4c4c4c;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header, footer {
+      background-color: #4c4c4c;
+      color: #929292;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .header-description {
+      margin-top: 10px;
+      color: #929292;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .video-item {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .poster, .video-item img {
+      width: 70%;
+      height: auto;
+      cursor: pointer;
+      max-width: 300px;
+      border-radius: 5px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    .video-caption {
+      font-size: 18px;
+      margin-top: 10px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #4c4c4c;
+      color: #929292;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .video-description {
+      display: none;
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #4c4c4c;
+      background-color: #4c4c4c;
+      color: #900C3F;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      color: #929292;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #900C3F;
+    }
+
+    .calendar-popup {
+      display: none;
+      background-color: #4c4c4c;
+      color: #929292;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      max-width: 600px;
+      width: 90%;
+      min-height: 400px;
+      overflow-y: auto;
+    }
+
+    .calendar-popup ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .calendar-popup li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .calendar-popup li:hover {
+      background-color: #f0f0f0;
+    }
+
+    button {
+      background-color: #929292;
+      color: #900C3F;
+      padding: 15px 25px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .calendar-popup button {
+      background-color: #929292;
+      color: #4c4c4c;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .calendar-popup button:hover {
+      background-color: #777;
+    }
+
+    .calendar-popup .close-button {
+      background-color: #929292;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>No Ceiling Art Workshop</h1>
+    <p class="header-description">
+      A creative journey led by Central Saint Martins artists Sophia Čáková and Shivani Mathur,<br>
+      exclusively for RAC members and guests.
+    </p>
+  </header>
+
+  <div class="page-container">
+    <section>
+      <h2>Our Inspiration</h2>
+      <p>
+        Sophia Čáková and Shivani Mathur, both trained at Central Saint Martins, London, met in 2020 in a space that inspired boundless creativity. Their “No Ceiling” workshop brings this energy to the Royal Automobile Club, offering members and guests a unique opportunity to explore art and abstraction in an exclusive setting.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>
+        Join us for an exclusive art workshop where creativity knows <span class="highlight">no bounds</span>. Led by Central Saint Martins-trained artists, “No Ceiling” invites RAC members and guests to explore abstraction through hands-on creation, reflection, and connection over a light lunch in the prestigious setting of the RAC’s Pall Mall clubhouse.
+      </p>
+      <div class="video-item">
+        <img src="csm.jpeg" alt="Central Saint Martins foyer, inspiration for No Ceiling" class="poster">
+      </div>
+    </section>
+
+<section>
+  <h2>Our Vision</h2>
+  <p>
+    Join us for an exclusive art workshop where creativity knows <span class="highlight">no bounds</span>.
+    Led by Central Saint Martins-trained artists, “No Ceiling” invites RAC members and guests to explore abstraction
+    through hands-on creation, reflection, and connection over a light lunch in the prestigious setting of the
+    RAC’s Pall Mall clubhouse.
+  </p>
+  <div class="video-item">
+    <img src="csm.jpeg" alt="Central Saint Martins foyer, inspiration for No Ceiling" class="poster">
+  </div>
+</section>
+
+<section>
+  <h2>About Sophia Čáková</h2>
+  <p>
+    A Central Saint Martins alumna and skilled oil painter, Sophia Čáková creates emotionally rich artwork.
+    Based between Bratislava and Croatia, she leads inspiring art workshops, including sessions in Slovakia’s forests,
+    fostering creativity and expression.
+  </p>
+  <div class="video-item">
+    <img src="sophia.jpeg" alt="Sophia Čáková teaching an art class" class="poster">
+  </div>
+</section>
+
+<section>
+  <h2>About Shivani Mathur</h2>
+  <p>
+    Shivani Mathur, a Central Saint Martins graduate, blends her mathematics background with intuitive art.
+    A former investment banker, she’s known as a “trader by day, painter by night,” creating abstract works
+    that transform precision into freedom.
+  </p>
+  <div class="video-item">
+    <img src="shivani.jpeg" alt="Shivani Mathur painting" class="poster">
+  </div>
+</section>
+
+<section>
+  <h2>The Workshop Experience</h2>
+  <p>
+    Join us at the Royal Automobile Club’s Pall Mall clubhouse (pending approval) from 10:00 AM to 1:00 PM for a
+    transformative art workshop, followed by a light lunch and networking in the club’s elegant dining spaces.
+  </p>
+
+  <p><strong>🎨 Overview</strong><br>
+    Create, reflect, and connect in a guided journey from realism to abstraction, led by two artists with
+    Central Saint Martins expertise. All materials, including one frame per participant, are included
+    for a modest fee of £50.
+  </p>
+
+  <p><strong>🧠 Part 1: Listening (20 minutes)</strong><br>
+    Discover abstraction’s history with insights into artists like Picasso and Richter.
+    Receive a curated set of sketching tools to spark your creativity.
+  </p>
+
+  <p><strong>✍️ Part 2: Creating (2 hours)</strong><br>
+    Produce four unique artworks on provided canvases, starting with a realistic sketch and progressing
+    to abstract expressions, using water-based paints and guided techniques.
+  </p>
+
+  <p><strong>🧐 Part 3: Reflecting (40 minutes)</strong><br>
+    Discuss your creative process with fellow participants, exploring how your art evolved,
+    guided by Sophia and Shivani’s expert feedback.
+  </p>
+
+  <p><strong>🎁 Takeaway</strong><br>
+    Take home one of your artworks — you will select your favorite from the four you’ve made.
+    You also have the option to have it framed — <span class="highlight">one frame is included</span>
+    in the cost of the workshop. The other three pieces will be exchanged with fellow participants,
+    so you’ll leave with a small, meaningful collection: one of your own and three made by others.
+  </p>
+</section>
+
+<section>
+  <h2>Join the Experience</h2>
+  <p>
+    Interested in bringing “No Ceiling” to the Royal Automobile Club?
+    Contact us at <a href="mailto:kalpanaanandmathur@gmail.com">kalpanaanandmathur@gmail.com</a>.
+  </p>
+</section>
+    
+  </div>
+</body>
+</html>
