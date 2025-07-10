@@ -28,6 +28,7 @@
 
     h1, h2 {
       text-align: center;
+      color: #929292;
     }
 
     .header-description {
@@ -166,7 +167,7 @@
   <header>
     <h1>No Ceiling Art Workshop</h1>
     <p class="header-description">
-      A creative journey led by Central Saint Martins artists Sophia Čáková and Shivani Mathur,<br>
+      A creative journey led by Central Saint Martins artists Sophia Cáková and Shivani Mathur,<br>
       exclusively for RAC members and guests.
     </p>
   </header>
